@@ -1,0 +1,176 @@
+body {
+    background-image: url(./background.jpg);
+    /* Center and scale the image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* for small devices */
+#app {
+    z-index: 9;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin: 3rem;
+    
+}
+
+.holder{
+    /*border: green solid 2px;*/
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+}
+
+label {
+    display:block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #f75;
+}
+
+/* for heading part */
+.headline {
+    color: #999;
+    text-align: center;
+}
+
+/* for zip code enter part */
+#zip {
+    border: #f75 solid 1px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+input {
+    display:block;
+    height: 4rem;
+    width: fit-content;
+    border: lightslategray solid 1px;
+    border-radius: 0.5em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* for feeling enter part */
+.feel_box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+ #feelings {
+    width: auto;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    border: 1px solid #f75;
+    border-radius: 0.5rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+#generate {
+    width: fit-content;
+    border: 1px solid #f75;
+    background: #fff;
+    padding: 0.5rem;
+    margin-left: 0.1rem;
+    color: #f75;
+    cursor: pointer;
+}
+
+#generate:hover {
+    color: #fff;
+    background-color: #f75;
+    transform: scale(1.03) translateY(3px);
+    transition: all 0.4s 0.3s;
+}
+
+/* for most recent entry part */
+.entry{
+    background: #ddd;
+    border: #789 solid 1px;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    padding-bottom: 0.4rem;
+    color: #f75;
+    text-transform: uppercase;
+    border-bottom: #f75 solid 2px;
+}
+
+#entryHolder {
+    padding-top: 0.7rem;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#date {
+    grid-area: date;
+}
+
+#temp {
+    grid-area: temp;
+}
+
+#content {
+    grid-area: cont;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+    color: #999;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #999;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+/* for median or large devices*/
+@media (min-width: 800px) {
+    #app{
+        display: flex;
+        flex-flow: column wrap;
+        /* different than small devices */
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding: 2rem;
+        /* end different */
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+        font-size: 1.5rem;
+        font-family: 'Oswald', sans-serif;
+    }
+}
